@@ -17,12 +17,10 @@ jobs:
         with:
           xcode-version: latest
 
-      - uses: actions/cache@v3
-        id: cargo-xcode
+      - uses: subosito/flutter-action@v2
         with:
-          path: |
-            ~/.cargo/bin/cargo-xcode
-          key: ${{ runner.OS }}-cargo-xcode-cache
+          flutter-version: '3.10.6'
+          channel: 'stable'
      
       - uses: actions/checkout@v4
 
